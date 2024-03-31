@@ -42,7 +42,7 @@ function Card({ children }) {
     <div style={{ padding: "40px", backgroundColor: "pink" }}>{children}</div>
   );
 }
-const BLRTheme = { backgroundColor: "black", color: "white" };
+const BLRTheme = { backgroundColor: "pink", color: "white" };
 const CheThe = { backgroundColor: "red", color: "black" };
 const isBLR = false;
 
