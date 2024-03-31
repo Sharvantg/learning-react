@@ -39,10 +39,10 @@ const person = {
 
 function Card({ children }) {
   return (
-    <div style={{ padding: "40px", backgroundColor: "pink" }}>{children}</div>
+    <div style={{ padding: "40px", backgroundColor: "blue" }}>{children}</div>
   );
 }
-const BLRTheme = { backgroundColor: "black", color: "white" };
+const BLRTheme = { backgroundColor: "blue", color: "white" };
 const CheThe = { backgroundColor: "red", color: "black" };
 const isBLR = false;
 
