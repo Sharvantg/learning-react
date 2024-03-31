@@ -11,3 +11,5 @@ Learning the basic of Git and github:
     - So instead of tracking only specifc files we ask it to track all the files
     - The git add command commits/saves all the files to the staging area
 
+- dev, staging are actaully branches that never get deleted
+
