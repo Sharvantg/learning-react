@@ -1,0 +1,13 @@
+Learning the basic of Git and github:
+
+- The git commit will first push to the staging environment and then you push to production
+
+- A branch in git is like a timeline of your repository. You can branch out a repo to work on that instance alone.
+    - The main branch that everyone is feeding off of is called the master branch. 
+    - So any changes that you are making you need to reconclie with that version of master and then merge the changes. 
+
+- git add .
+    - This command simply tells the system to track all the files on this repo. 
+    - So instead of tracking only specifc files we ask it to track all the files
+    - The git add command commits/saves all the files to the staging area
+

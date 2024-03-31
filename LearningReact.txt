@@ -1,0 +1,47 @@
+React fundamentals for writing good code:
+1. Always define pure functions/components
+    - For a particular input, a pure component/function will always pass the same result
+    - They don't have any side effects. They won't modify any varaibles outside them. 
+2. Always set state, never write to a varaible. Never change pre-existing variable values when your component is rendering. 
+3. Local mutation is fine: change only variables that are created within a function/component, basically variables whose scope is within that function only.
+
+Good to know:
+Updation, creation, deletion, or any kind of change is referred to as a "side effect"
+
+4. Side effects have to happen "on the side" and not during rendering
+    - Side effects usually belong inside event handlers
+    - Although event handlers are defined inside the function, they don't run during rendering
+    - Event handlers don't need to be pure
+5. Always use the rendering process to handle UI logic 
+
+Good to know:
+Why does React use only map() and not forEach?
+- Immutability: map() always returns a new array with new elements while forEach() modifies the existing elements
+- Returns a value: map() returns an array which makes it easier to create react elements, while forEach() is a loop that returns undefined
+- Chaining: Since map() returns an array you can chain other Js functions to the map()
+
+Good to know:
+Why should you write only pure functions?
+1. Your components can run anywhere. Be it on the client or the server. Since they return the same result for any input, they can be slotted in anywhere. 
+2. More efficient. You can skip rendering components whose inputs have not changed. If they're going to return the same  value each time, then you can just skip rendering them. 
+3. Interrupting Rendering. If the data changes inbetween updating a deep component tree, then react can stop the rendering midway and restart it without continuing with the old data. This is because pure functions will return the same output for the same input and have NO SIDE EFFECTS. 
+
+6. A bundlr is used to determine what dependency files are to be included when building for production. 
+    - Large bundl sizes will delay the rendering of the UI; they will slow time to paint (Time to First Paint)
+    - The process of Bundling affects performance of apps and their rendering capabilities
+    - Having a grasp over the dependency tree will help in optimising the bundl sizes
+
+7. When you change any state in a component the entire component will re-render with the new values
+
+Good to know: 
+They are only two reasons for a component to render: 1. It's the components intial render, 2. One of the components (or it's parents') state has updated
+
+8. Setting state only changes it for the next render.
+    - What this means is, any updation of value will be visible only after the component re-renders, if you try to show or do something without waiting for the re-rendering to happen then it'll show whatever is the current state value is only. 
+    - React schedules functions during intial render with the snapshot of the state during that render
+        - so even if the state changes, the scheduled function will still run with the old state values only
+    - React keeps the state values “fixed” within one render’s event handlers
+    - React waits until all code in the event handlers has run before processing your state updates
+
+9. You can also pass objects via states
+    - const[value, setValue] = useState({v1: "something", v2: "somethingElse" });
